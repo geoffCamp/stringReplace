@@ -3,6 +3,7 @@
 
 $(document).ready(function(){
 
+        //Read in input and and replace all EOL characters with a comma. Copy new string to output field.
 	$('#convert').click(function(){
 		var inputString = $('#input').val()
 		//alert(inputString); 
@@ -14,17 +15,16 @@ $(document).ready(function(){
 		$('#output').val(outputString)
 		$('#output').select();
 	});
-			
+	
+	//Copy output for easy text transfer.		
 	$('#copy').click(function(){
 		$('#output').select(); //allows quicker copy/paste
 	});
-			
+	
+	//clear old data from input and output fields.		
 	$('#clear').click(function(){
 		$('#output').val("");
 		$('#input').val("");
 	});
 
-
 });
-
-//document.getElementById(id)
